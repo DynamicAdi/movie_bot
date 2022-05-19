@@ -24,8 +24,8 @@ auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
 
 # MongoDB information
-DATABASE_URI = ""
-DATABASE_NAME = " "
+DATABASE_URI = "mongodb+srv://RobinDB:RobinHood@cluster0.yk7s6.mongodb.net/?retryWrites=true&w=majority"
+DATABASE_NAME = "RobinDB"
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
