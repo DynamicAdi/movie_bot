@@ -1,0 +1,29 @@
+
+name: SessionAstro
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+       - name: Checkout
+         uses: actions/checkout@deafult
+       
+       - uses: styfle/cancel-workflow-action@0.9.0
+         name: "Cancel duplicate workflow runs"
+         
+       - name: cloning repo
+         continue-on-error: true
+         run: |
+           git clone https://github.com/loverboyXD/movie_bot.git
+           cd movie_bot
+           pip install -U -r requirements.txt
+       - name: Running BOT
+         timeout-minutes: 350
+         continue-on-error: true
+         run: |
+           python3 bot.py
