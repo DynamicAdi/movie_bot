@@ -9,7 +9,7 @@ SESSION = environ.get('SESSION', 'Media_search')
 USER_SESSION = environ.get('USER_SESSION', 'User_Bot')
 API_ID = environ.get("API_ID", "")
 API_HASH = environ.get("API_HASH", "")
-BOT_TOKEN = environ.get("BOT_TOKEN", ""
+BOT_TOKEN = environ.get("BOT_TOKEN", "")
 USERBOT_STRING_SESSION = environ.get('USERBOT_STRING_SESSION')
 
 # Bot settings
